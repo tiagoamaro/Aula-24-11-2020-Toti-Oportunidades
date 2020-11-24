@@ -1,0 +1,13 @@
+<form #buscaForm="ngForm" (ngSubmit)="pesquisa(buscaForm)">
+  <input required [(ngModel)]="busca" type="text" name="busca" placeholder="Digite sua busca..." />
+  <!-- <input #emailInput [value]="email" (input)="email = emailInput.value" name="email" type="text"> -->
+  <!-- <input [(ngModel)]="email" name="email" type="text"> -->
+  <button>Pesquisar</button>
+</form>
+
+<div class="erro" *ngIf="erroMensagem">{{erroMensagem}}</div>
+
+<ul>
+  <!-- <li>Meu email foi: {{email}}</li> -->
+  <li>Minha busca foi: {{busca}}</li>
+</ul>
